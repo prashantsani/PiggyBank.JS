@@ -194,7 +194,7 @@ $('.depositSubmit').click(function (event) {
 	}
 	else{
 		$depositAmt = parseInt($depositAmt);
-		var statement = "<li><span class='rupeeSymbol' style='margin-left: -7px'></span> "+ $depositAmt + " in Piggy Bank " + parseInt(SelectedPB+1) +"</li>"
+		var statement = "<li><span class='rupeeSymbol' style='margin-left: -7px'></span> "+ $depositAmt + " deposited in Piggy Bank " + parseInt(SelectedPB+1) +"</li>"
 		piggyBanks[SelectedPB].deposit($depositAmt,statement);
 
 		piggyBanks[SelectedPB].sayBal();
