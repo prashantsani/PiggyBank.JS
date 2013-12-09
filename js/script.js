@@ -186,22 +186,21 @@ $('.depositSubmit').click(function (event) {
 
 	var $depositAmt= $('#depositAmt').val();
 
-	if(typeof($depositAmt) !="number"){
+	if($depositAmt==""){
+		SPIDerAlert('Please Enter The Amount to be Deposited');
+	}
+	else if(typeof(parseInt($depositAmt)) !="number"){
 		SPIDerAlert('Please Enter The Amount in Numericals');
 	}
-	else if($depositAmt !=""){
+	else{
 		$depositAmt = parseInt($depositAmt);
 		var statement = "<li><span class='rupeeSymbol'></span> "+ $depositAmt + " in Piggy Bank " + parseInt(SelectedPB)+1 +"</li>"
 		piggyBanks[SelectedPB].deposit($depositAmt,statement);
 
 		piggyBanks[SelectedPB].sayBal();
 		piggyBanks[SelectedPB].sayLT();
-		
+	}
 
-	}
-	else{
-		SPIDerAlert('Please Enter The Amount to be Deposited');
-	}
 
 	//Reset Value of Deposit Input
 	$('#depositAmt').val('');
