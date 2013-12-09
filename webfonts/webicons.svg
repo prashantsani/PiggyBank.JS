@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="webicons" horiz-adv-x="1000" >
+<font-face font-family="webicons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="attention" unicode="&#xe800;" d="m905 77c8-14 11-30 11-45c0-53-41-91-90-91l-735 0c-48 0-91 40-91 91c0 15 4 31 13 45l368 637c15 28 44 45 78 45c32 0 61-17 77-45z m-512 472l0-299l133 0l0 299l-133 0z m67-369c-42 0-75-32-75-76c0-41 33-74 75-74s75 33 75 74c0 43-32 76-75 76z" horiz-adv-x="916" />
+<glyph glyph-name="rupee" unicode="&#xe801;" d="m0 570l45 69h214q-11 25-30 39q-17 12-42 22q-44 11-52 11h-135l45 69h450l-46-69h-119q15-15 22-33q8-20 12-39h131l-46-69h-83q-6-41-27-74q-26-36-54-54q-26-21-70-36q-45-15-82-15l273-341h-118l-263 330v64h65q50 0 85 12q35 14 55 32q22 21 29 41q9 23 9 41h-268z" horiz-adv-x="494.6" />
+</font>
+</defs>
+</svg>

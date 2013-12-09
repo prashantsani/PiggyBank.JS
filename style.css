@@ -1,0 +1,496 @@
+/* **************************************
+	Author : Prashant Sani.
+	www.prashantsani.com/spider/PiggyBank.JS
+************************************** */
+/* Reset */
+html{background: url(images/background.png) repeat; }
+body {margin:0; padding:0; height:100%; width:100%; font-family: 'Ubuntu', sans-serif; font-size: 16px; color: #333}
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	-webkit-padding-start: 0;
+	-webkit-padding-end: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+/* Contain Floats */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+@font-face {
+    font-family: 'ubuntuLight';
+    src: url('webfonts/ubuntu-l-webfont.eot');
+    src: url('webfonts/ubuntu-l-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/ubuntu-l-webfont.woff') format('woff'),
+         url('webfonts/ubuntu-l-webfont.ttf') format('truetype'),
+         url('webfonts/ubuntu-l-webfont.svg#ubuntuLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ubuntuRegular';
+    src: url('webfonts/ubuntu-r-webfont.eot');
+    src: url('webfonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/ubuntu-r-webfont.woff') format('woff'),
+         url('webfonts/ubuntu-r-webfont.ttf') format('truetype'),
+         url('webfonts/ubuntu-r-webfont.svg#ubuntuRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'webicons';
+    src: url('webfonts/webicons.eot');
+    src: url('webfonts/webicons.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/webicons.woff') format('woff'),
+         url('webfonts/webicons.ttf') format('truetype'),
+         url('webfonts/webicons.svg#webicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6,strong{
+	font-weight: normal;
+}
+/* Selection Color */
+::-moz-selection { background: rgba(0,165,217,0.7); color: #fff; text-shadow: none; }
+::selection { background: rgba(0,165,217,0.7); color: #fff; text-shadow: none; }
+/* Links */
+a:link, a:visited, button{
+	cursor: pointer;
+	text-decoration: none;
+	color: #666;
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+}
+html, body{
+	position: relative;
+	font-size: 16px;
+	font-family: 'ubuntuLight';
+	color: #666;
+}
+.wrap{
+	width: 960px;
+	max-width: 95%;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 150px;
+}
+/* Right Hand Side Detail Box */
+.psDetail{
+	position: fixed;
+	top: 50px;
+	right: 0;
+	text-align: right;
+	max-width: 100%;
+	width: 300px;
+}
+.psDetail h1{
+	font-size: 230%;
+	height: 52px;
+	line-height: 52px;
+	background-color: #333;
+	color: white;
+	position: relative;
+	padding: 0 50px 0 0;
+	margin: 0;
+}
+.psDetail h1:before{
+	content: "";
+	width: 0; 
+	height: 0; 
+	position: absolute;
+	top: 0;
+	left: -35px;
+	border-bottom: 52px solid #333; 
+	border-left: 35px solid transparent;
+}
+.psDetail p{
+	font-family: 'ubuntuRegular';
+	padding-right: 50px;
+}
+/* Main Content */
+.piggyIntroBox{
+	width: 700px;
+	margin: 0 auto;
+}
+.screen1Form,
+.initBalContain{
+	width: 380px;
+	margin: 0 auto;
+}
+.piggyIntroBox h1{
+	font-size: 280%;
+	text-align: center;
+	margin-bottom: 0.3em;
+	color: #888;
+}
+.piggyIntroBox fieldset{
+	text-align: center;
+	margin-bottom: 15px;
+}
+.piggyIntroBox label{
+	margin-bottom: 10px;
+	color: #666;
+	font-size: 140%;
+}
+.piggyIntroBox input{
+	background-color: #bbb;
+	border: 1px solid transparent;
+	border-radius: 1px;
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+}
+.depositWithdrawForm input[type=number]:focus,
+.piggyIntroBox input:focus{
+	border: 1px solid #fff;
+	box-shadow: 0 0 8px #fff;
+}
+label[for="PBHolder"]{
+	font-size: 215%;
+	margin-bottom: 10px;
+}
+label[for="PBHolder"],
+#PBHolder{
+	display: block;
+	text-align: center;
+	text-transform: capitalize;
+}
+#PBHolder{
+	width: 350px;
+	height: 40px;
+	padding: 10px;
+	font-size: 200%;
+	font-family: 'ubuntuRegular';
+	color: #333;
+	margin: 0 auto;
+}
+#noPiggyBnk{
+	width: 100px;
+	height: 20px;
+	margin-left: 10px;
+	font-size: 117%;
+	padding: 10px;
+	color: #333;
+}
+.initBalContain{
+	margin-top: 30px;
+	width: 280px;
+}
+.initBalContain legend{
+	font-size: 170%;
+	margin-bottom: 10px;
+	color: #888;
+}
+.initBalContain p{
+	margin-bottom: 5px;
+}
+.initBalContain label{
+	font-size: 108%;
+	position: relative;
+	margin-bottom: 0;
+}
+.initBalContain label,
+.initBalContain input[type=number]{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.initBalContain input[type=number]{
+	padding: 5px;
+	font-size: 95%;
+	width: 90px;
+	height: 15px;
+	color: #333;
+	font-family: 'ubuntuRegular';
+}
+.initBalContain .rupeeSymbol:after{
+	margin-right: 5px;
+}
+.introSubmit{
+	background-color: #ccc;
+	float: right;
+	font-size: 125%;
+	min-width: 70px;
+	padding: 10px 15px;
+	border: 1px solid transparent;
+	color: #333;
+	border-radius: 1px;
+	text-align: center;
+}
+.introSubmit:hover, .introSubmit:active{
+	border: 1px solid #fff;
+	background-color: #bbb;
+	box-shadow: 0 0 8px #fff;
+}
+.introSubmit:active{
+	box-shadow: inset 1px 1px 0 1px #555, inset -1px -1px 0 1px #aaa;
+}
+.screen2Submit{
+	margin-right: 7px;
+}
+.rupeeSymbol{
+	display: inline-block;
+}
+.rupeeSymbol:after{
+	content: "\e801";
+	font-family: 'webicons';
+	font-size: 101%;
+	margin: 0 0 -1px 7px;
+	line-height: 1;
+	vertical-align: baseline;
+	display: inline-block;
+}
+/* Screen 3 */
+.screen2Contain{
+	display: none;
+}
+.screen3Contain{
+	width: 600px;
+	display: none;
+}
+.screen3Contain h1{
+	font-size: 200%;
+	padding-bottom: 7px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #333;
+	line-height: 1;
+}
+.userData{
+	border-bottom: 1px solid #333;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.userName{
+	color: #aaa;
+	line-height: 1;
+}
+.userBalance,
+.lstTranscn{
+	font-size: 115%;
+	margin-top: 10px;
+	line-height: 1;
+}
+.userBalance span,
+.lstTranscn span{
+	color: #888;
+	margin-right: 5px;	
+}
+.userData .rupeeSymbol{
+	margin-right: 2px;
+	color: #666;
+}
+.depositWithdrawForm{margin-bottom: 20px;
+
+}
+.depositWithdrawForm p{
+	margin-bottom: 10px;
+}
+.depositWithdrawForm label{
+	width: 100px;
+	display: inline-block;
+}
+.depositWithdrawForm input[type=number]{
+	padding: 5px;
+	font-size: 95%;
+	width: 130px;
+	height: 15px;
+	color: #333;
+	font-family: 'ubuntuRegular';
+	background-color: #bbb;
+	border: 1px solid transparent;
+	border-radius: 1px;
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+}
+.transcnContent{
+}
+.transcnContent h1{
+	font-size: 160%;
+}
+.transcnList{
+	margin-bottom: 50px
+}
+.transcnList li{
+	display: block;
+}
+.transcnList li:before{
+	content: "\203A";
+	font-size: 150%;
+	font-family: "ubuntuRegular";
+	margin-right: 5px;
+	vertical-align: text-bottom;
+	line-height: 1;
+}
+.withdrawSubmit,
+.depositSubmit{
+	padding: 3px;
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 10px;
+	border: 1px solid transparent;
+	float: none;
+	font-size: 100%;
+}
+.piggyBankListContain{
+	float: right;
+}
+.piggyBankListContain legend{
+	line-height: 1;
+	margin-bottom: 10px;
+}
+.piggyBankListContain h4{
+	margin: 0 0 10px 0;
+	font-size: 20px;
+}
+.piggyBankList li{
+	margin: 5px 0;
+	list-style: none;
+}
+.piggyBankList input[type=radio]{
+	margin-right: 5px;
+}
+/************************************
+			Library
+************************************/
+/* iCheck plugin style
+----------------------------------- */
+.styledCheckbox,
+.styledRadio {
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+    padding: 0;
+    cursor: pointer;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    box-shadow: 0 0 0 2px white;
+    background-color: white;
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+.styledRadio.hover,
+.styledCheckbox.hover{
+    background-color: #888;
+}
+.styledRadio.checked,
+.styledCheckbox.checked {
+    background-color: white;
+    box-shadow: inset 0 0 0 6px black, 0 0 0 2px white;
+}
+.styledRadio.disabled,
+.styledCheckbox.disabled{
+    opacity: 0.7;
+    cursor: default;
+}
+.styledRadio.checked.disabled,
+.styledCheckbox.checked.disabled{
+    opacity: 0.7;
+    background-color: #cf0003;
+}
+.testForm .styledCheckbox,
+.testForm .styledRadio {
+	box-shadow: 0 0 0 2px #ccc;
+}
+.testForm .styledRadio.checked,
+.testForm .styledCheckbox.checked {
+    background-color: #888;
+}
+
+/* custom LB */
+.customLBOverlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 1000;
+	display: none;
+}
+.customLBData{
+	position: fixed;
+	left: 50%;
+	width: 470px;
+	height: 120px;
+	padding: 15px;
+	margin: -75px 0 0 -250px;
+	background-color: #bbb;
+	z-index: 10000;
+	opacity: 1;
+	top: 50%;
+	display: none;
+}
+.customLBData h1:before{
+	content: "\e800";
+	font-family: 'webicons';
+	font-size: 50px;
+	margin-right: 20px;
+	vertical-align: middle;
+	color: yellow;
+	text-shadow: 1px 1px 1px #333;
+}
+.customLBData p{
+	margin-left: 68px;
+}
+.customLBDataBtn{
+	font-family: 'TrajanProBold';
+	width: 100px;
+	height: 35px;
+	float: right;
+	background-color: #ddd;
+	border: 1px solid #555;
+	margin-top: -5px;
+}
+.customLBDataBtn:hover, .customLBDataBtn:active{
+	box-shadow: inset 1px 1px 0 1px #555, inset -1px -1px 0 1px #bbb;
+}
+
+::-webkit-input-placeholder {
+   color: #777;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #777;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #777;  
+}
+:-ms-input-placeholder {  
+   color: #777;  
+}
+/************************************
+			Media Queries
+************************************/
+@media(max-width: 400px){
+	body{
+		font-size: 14px;
+	}
+	.psDetail h1,
+	.psDetail p{
+		padding-right: 20px;
+	}
+}
+@media(max-height: 450px){
+	body{
+		font-size: 14px;
+	}
+	.psDetail h1,
+	.psDetail p{
+		padding-right: 20px;
+	}
+	.psDetail{
+		top: 10%;
+	}
+}

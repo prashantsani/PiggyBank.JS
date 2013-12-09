@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+<head>
+	<title>Prashant Sani -SPIDer Piggy Bank</title>
+    <meta name="description" content="Portfolio website of Prashant Sani,HTML5 developer from Mumbai,
+    India providing Services in PSD to HTML5 Conversion,PSD to XHTML and CSS3,HTML5">
+    <meta name="author" content="Prashant Sani" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="js/jQuery.js"></script>
+</head>
+<body>
+
+	<header class="psDetail">
+		<h1>SPIDer Bank</h1>
+	</header>
+
+	<!-- Screen 1 and 2 -->
+	<section class="wrap screen1N2Contain">
+		<article class="piggyIntroBox">
+			<h1>Welcome To SPIDer Piggy Bank</h1>
+			<div class="screen1Contain">
+				<form name="screen1Form" id="screen1Form" class="clearfix screen1Form">
+					<fieldset>
+						<label for="PBHolder">Please Enter Your Name</label>
+						<input type="text" name="PBHolder" id="PBHolder" autofocus="autofocus">
+					</fieldset>
+					<fieldset>
+						<label for="noPiggyBnk">Number of Piggy Banks:</label>
+						<input type="number" name="noPiggyBnk" id="noPiggyBnk" min="1">
+					</fieldset>
+					<button class="introSubmit screen1Submit">Go</button>
+				</form>
+			</div><!-- screen1Contain-->
+
+			<div class="screen2Contain">
+				<form class="clearfix initBalContain">
+					<fieldset>
+						<legend>Enter Initial Balance:</legend>
+					</fieldset>	
+					<button class="introSubmit screen2Submit">Go</button>
+				</form><!-- initBalContain -->
+			</div><!-- screen2Contain-->
+
+		</article><!-- piggyIntroBox -->
+	</section>
+	
+
+
+	<!-- Screen 3 -->
+	<section class="wrap screen3Contain clearfix">
+		<h1>Welcome To SPIDer Piggy Bank</h1>
+		<div class="userData">
+			<h2 class="userName"></h2>
+			<h3 class="userBalance"><span>Balance:</span><span class="rupeeSymbol"></span>
+			<span class="userBalanceAmt"></span></h3>
+			<h4 class="lstTranscn"><span>Last Transaction:</span><span class="rupeeSymbol"></span>
+			<span class="lstTranscnAmt"></span>
+			</h4>
+		</div>
+		<form class="depositWithdrawForm clearfix">
+			<div class="piggyBankListContain">
+				<fieldset>
+					<legend>Selected Piggy Bank</legend>
+					<ul class="piggyBankList">
+					</ul>
+				</fieldset>
+			</div><!-- piggyBankListContain -->  
+			<p>
+				<label for="depositAmt">Deposit:</label>
+				<input type="number" name="depositAmt" id="depositAmt" autofocus="autofocus" min="0">
+				<button class="introSubmit depositSubmit">Go</button>
+			</p>
+			<p>
+				<label for="WithdrawAmt">Withdraw:</label>
+				<input type="number" name="WithdrawAmt" id="WithdrawAmt">
+				<button class="introSubmit withdrawSubmit">Go</button>
+			</p>
+		</form>
+		<article class="transcnContent">
+			<h1>Transactions</h1>
+			<ul class="transcnList">
+				<li>Welcome To SPIDer Piggy Bank</li>
+			</ul>
+		</article>
+	</section>
+
+	<div class="customLBOverlay"></div>
+	<article class="customLBData">
+		<h1>Error!</h1>
+		<p class="customLBText"></p>
+	</article>	
+	
+
+	<script src="js/jQuery.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
