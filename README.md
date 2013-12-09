@@ -2,7 +2,8 @@ PiggyBank.JS
 ============
 
 ## Introduction
-JavaScript Implimentation of Piggy Bank.
+JavaScript Implimentation of Piggy Bank. 
+
 [Demo](http://prashantsani.com/demos/PiggyBank.JS/)
 
 ## Code Inspiration
