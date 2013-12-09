@@ -201,7 +201,6 @@ $('.depositSubmit').click(function (event) {
 		piggyBanks[SelectedPB].sayLT();
 	}
 
-
 	//Reset Value of Deposit Input
 	$('#depositAmt').val('');
 
@@ -214,7 +213,13 @@ $('.withdrawSubmit').click(function (event) {
 
 	var $WithdrawAmt= parseInt($('#WithdrawAmt').val());
 
-	if($WithdrawAmt.isNumeric() != ''){
+	if($WithdrawAmt==""){
+		SPIDerAlert('Please Enter The Amount to be Withdrawed');
+	}
+	else if(typeof(parseInt($WithdrawAmt)) !="number"){
+		SPIDerAlert('Please Enter The Amount in Numericals');
+	}
+	else{
 		$WithdrawAmt =parseInt($WithdrawAmt);
 		var statement = "<li><span class='rupeeSymbol'></span> "+ $WithdrawAmt + " Withdrawed in Piggy Bank " + parseInt(SelectedPB)+1 +"</li>"
 		piggyBanks[SelectedPB].withdraw($WithdrawAmt,statement);
@@ -222,9 +227,7 @@ $('.withdrawSubmit').click(function (event) {
 		piggyBanks[SelectedPB].sayBal();
 		piggyBanks[SelectedPB].sayLT();
 	}
-	else{
-		SPIDerAlert('Please Enter The Amount to be Deposited in Decimal Numbers');
-	}
+
 
 	//Reset Value of Deposit Input
 	$('#WithdrawAmt').val('');
