@@ -1,8 +1,9 @@
 PiggyBank.JS
 ============
 
-## Introduction.
-JavaScript Implimentation of Piggy Bank. 
+## Introduction
+JavaScript Implimentation of Piggy Bank.
+
 [Demo](http://prashantsani.com/demos/PiggyBank.JS/).
 
 ## Code Inspiration
@@ -13,4 +14,5 @@ JavaScript Implimentation of Piggy Bank.
 
 ## License
 [MIT License](http://opensource.org/licenses/MIT).
+
 Feel Free to use it in your Personal/Commerical Projects 
