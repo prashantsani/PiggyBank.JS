@@ -15,4 +15,4 @@ JavaScript Implimentation of Piggy Bank.
 ## License
 [MIT License](http://opensource.org/licenses/MIT).
 
-Feel Free to use it in your Personal/Commerical Projects 
+Feel Free to use it in your Personal/Commerical Projects.
