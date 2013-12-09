@@ -194,7 +194,7 @@ $('.depositSubmit').click(function (event) {
 	}
 	else{
 		$depositAmt = parseInt($depositAmt);
-		var statement = "<li><span class='rupeeSymbol'></span> "+ $depositAmt + " in Piggy Bank " + parseInt(SelectedPB)+1 +"</li>"
+		var statement = "<li><span class='rupeeSymbol'></span> "+ $depositAmt + " in Piggy Bank " + parseInt(SelectedPB+1) +"</li>"
 		piggyBanks[SelectedPB].deposit($depositAmt,statement);
 
 		piggyBanks[SelectedPB].sayBal();
@@ -221,7 +221,7 @@ $('.withdrawSubmit').click(function (event) {
 	}
 	else{
 		$WithdrawAmt =parseInt($WithdrawAmt);
-		var statement = "<li><span class='rupeeSymbol'></span> "+ $WithdrawAmt + " Withdrawed in Piggy Bank " + parseInt(SelectedPB)+1 +"</li>"
+		var statement = "<li><span class='rupeeSymbol'></span> "+ $WithdrawAmt + " Withdrawed in Piggy Bank " + parseInt(SelectedPB+1) +"</li>"
 		piggyBanks[SelectedPB].withdraw($WithdrawAmt,statement);
 
 		piggyBanks[SelectedPB].sayBal();
