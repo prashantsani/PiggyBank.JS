@@ -3,7 +3,7 @@ PiggyBank.JS
 
 ## Introduction
 JavaScript Implimentation of Piggy Bank.
-[![PigyBank.JS](http://prashantsani.com/spider/wp-content/uploads/2013/12/Piggy-Bank-In-JavaScript.png "PigyBank.JS")](http://prashantsani.com/spider/2013/12/introducing-piggybank-js/)
+![PigyBank.JS](http://prashantsani.com/spider/wp-content/uploads/2013/12/Piggy-Bank-In-JavaScript.png "PigyBank.JS")
 
 [Demo](http://prashantsani.com/demos/PiggyBank.JS/).
 
