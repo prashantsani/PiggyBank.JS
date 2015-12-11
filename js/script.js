@@ -2,7 +2,7 @@
 
 	Piggy Bank Code in JavaScript.<jQuery Version:0.1>
 	Created By : Prashant Sani.
-	Website : www.prashantsani.com/spider/PiggyBank.JS
+	Website : http://prashantsani.com/spider/2013/12/09/introducing-piggybank-js/
 	License : www.opensource.org/licenses/mit-license.php
 	Inspiration :
 	JavaScript/HTML5 Course in Rajesh Patkar Institute
